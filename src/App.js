@@ -1,6 +1,6 @@
-import './App.css';
+import { Component} from 'react';
 
-import { Component } from 'react';
+import './App.css';
 
 class WhoAmI extends Component {
 
@@ -33,7 +33,7 @@ class WhoAmI extends Component {
 		const {name, surname, link} = this.props;
 
 		return (
-			<div>
+			<>
 				<button onClick={this.nextYear}>+++</button>
 				<h1>My name is {name}, surname - {surname}, age - {this.state.years}, position - {this.state.position}</h1>
 				<a href={link}>My profile</a>
@@ -41,7 +41,7 @@ class WhoAmI extends Component {
 					<span>Введите должность</span>
 					<input type="text" onChange={(event) => this.commitInputChanges(event, 'some color')}/>
 				</form>
-			</div>
+			</>
 		)
 	}
 }
