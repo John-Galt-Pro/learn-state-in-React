@@ -1,4 +1,6 @@
-import { Component} from 'react';
+import { Component } from 'react';
+
+import styled from 'styled-components'
 
 import './App.css';
 
@@ -46,17 +48,18 @@ class WhoAmI extends Component {
 	}
 }
 
+const Wrapper = styled.div`
+	width: 600px;
+	margin: 80px auto 0 auto;
+`;
+
 function App() {
   return (
-    <div className="App">
+    <Wrapper>
 		<WhoAmI name="John" surname="Galt" link="facebook.com"/>
 		<WhoAmI name="Hank" surname="Rearden" link="instagram.com"/>
-    </div>
+    </Wrapper>
   );
 }
 
 export default App;
-
-
-
-
